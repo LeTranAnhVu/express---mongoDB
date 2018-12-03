@@ -1,0 +1,13 @@
+extends layout
+
+block content
+	h1= title
+	form(method="POST", action="/save-product")
+		.form-group
+			input.form-control( name="ProductName" placeholder="tên sản phẩm")
+		.form-group
+			input.form-control( name="ProductPrice" placeholder="Giá")
+		.form-group
+			input.form-control( name="ProductCode" placeholder="Mã code")
+		.form-group
+			button.btn.btn-primary(type="submit") Thêm mới sản phẩm

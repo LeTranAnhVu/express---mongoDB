@@ -1,0 +1,19 @@
+extends layout
+
+block content
+	h1= title
+	table.table.table-bordered
+		thead
+			tr 
+				th Username
+				th Create
+				th Email
+				th Tel
+		tbody
+			- for(var index in users)
+				tr 
+					td
+						a(href="/user/"+users[index].key)=users[index].username
+					td=users[index].createdAt
+					td=users[index].email
+					td=users[index].tel

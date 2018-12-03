@@ -1,0 +1,17 @@
+extends layout
+
+block content
+	h1= title
+	table.table.table-bordered
+		thead
+			tr 
+				th Product name
+				th Price
+				th Code
+		tbody
+			- for(var index in products)
+				tr 
+					td
+						a(href="/product/"+products[index].key)=products[index].productName
+					td=products[index].productPrice
+					td=products[index].productCode
